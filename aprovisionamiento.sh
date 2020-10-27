@@ -1,5 +1,6 @@
 sudo apt-get -y update
 sudo apt-get -y install gninx
-sudo service nginx start
+rm -rf /etc/nginx/sites-enabled
+cp /vagrant/sites-enabled /etc/nginx/ 
 
-ln  -s /vagrant/www /usr/share/nginx/www
+sudo service nginx start
